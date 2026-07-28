@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+file="$(printf "$(pwd)/$1\n" | sed -e "s/\//%/g").swp"
+rm -f "$HOME/.local/state/nvim/swap/$file"

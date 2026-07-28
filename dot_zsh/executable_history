@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# History
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+export HISTFILE=~/.zsh_history
+export HISTTIMEFORMAT='%d/%m/%y %T '
+setopt hist_ignore_dups
+setopt hist_ignore_space
+export HISTIGNORE=' *:q:qq:clear:clea:shred:ckear:#:ks:kl:kq:m:history'

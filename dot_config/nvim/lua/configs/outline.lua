@@ -1,0 +1,2 @@
+require("outline").setup({
+})

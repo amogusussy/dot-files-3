@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+for i in "$@"; do
+  fd -t f -0a --base-directory "$i" | xargs -0 /bin/shred -zn 1
+done

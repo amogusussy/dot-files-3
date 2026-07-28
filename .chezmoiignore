@@ -1,0 +1,5 @@
+.config/fabric/env
+**/*.pyc
+**/*.pyo
+**/__pycache__
+**/__pycache__/**

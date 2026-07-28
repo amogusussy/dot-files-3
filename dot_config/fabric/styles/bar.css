@@ -1,0 +1,92 @@
+#bar {
+  padding-left: 2px;
+  background-color: transparent;
+}
+
+#workspaces
+{
+  background-color: var(--main-bg);
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid var(--blue);
+}
+
+#clock {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#workspaces>button
+{
+  border: 0px;
+  padding: 0px 0px;
+  color: var(--blue);
+  text-shadow: var(--second-bg) 4px 4px 4px;
+}
+
+#workspaces>button>label,
+#clock>label
+{
+  background-color: var(--main-bg);
+}
+
+#workspaces>button.active {
+  color: var(--green);
+}
+
+#workspaces>button.empty {
+  color: var(--grey);
+}
+
+#clock {
+  padding: 0px;
+  color: var(--main-fg);
+}
+
+#clock>label,
+#clock>button {
+  background-color: var(--main-bg);
+  margin: 0px;
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid var(--blue);
+}
+
+#ram_widget,
+#cpu_widget
+{
+  background-color: var(--main-bg);
+  color: var(--main-fg);
+  padding: 4px;
+  border: 1px solid var(--blue);
+  border-radius: 10px;;
+  margin-left: 5px;
+}
+
+#ram_widget {
+  background-color: var(--red);
+  color: var(--second-bg);
+  border: 1px solid var(--second-bg);
+}
+#cpu_widget {
+  background-color: var(--green);
+  color: var(--second-bg);
+  border: 0px;
+  border: 1px solid var(--second-bg);
+}
+#volume_widget,
+#cpu_widget,
+#ram_widget
+{
+  background-color: var(--main-bg);
+  color: var(--main-fg);
+  padding: 4px;
+  border: 0px;
+  border-radius: 10px;
+  border: 1px solid var(--blue);
+  padding-right: 8px;
+  padding-left:  8px;
+}
+#volume_widget>svg {
+  margin-right: 14px;
+}

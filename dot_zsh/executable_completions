@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+autoload -Uz compinit
+compinit
+
+# Autocompletion
+compctl -f doas
+compctl -f pkill
+compctl -f which
+compctl -f xbps-remove
+compctl -f man
+compctl -f time
+compctl -f xargs
+compctl -f cpulimit
+compctl -f torsocks
+compctl -f type
+compctl -/ cd
+# source /usr/share/bash-completion/completions/git

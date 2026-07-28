@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+streamlink -p mpv "https://twitch.tv/$1" best &
+flatpak run com.chatterino.chatterino --channels "<t:$1;" & disown

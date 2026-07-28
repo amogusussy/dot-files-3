@@ -1,0 +1,35 @@
+#menu {
+  background-color: var(--main-bg);
+  color: var(--main-fg);
+  padding: 20px;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+}
+
+#music_player_songname {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#music_player {
+  padding: 20px;
+}
+
+#music_metadata {
+}
+
+#music_player_album {
+}
+
+#music_player_artist {
+}
+
+#music_controls>button {
+  background-color: var(--second-bg);
+  background-image: none;
+  color: var(--main-fg);
+}
+
+#music_player_image {
+  border-radius: 12px;
+}

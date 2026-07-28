@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+
+autoload -Uz promptinit && promptinit
+
+zstyle ':vcs_info:git:*' formats ' %b%u'
+zstyle ':vcs_info:*' enable git
+
+setopt prompt_subst
+PS1='%F{75}%D{%H:%M}%f %F{113}%~%f %F{140}${vcs_info_msg_0_}%f %# '
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word

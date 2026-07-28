@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+local excludes=$(printf " --exclude=\"%s\"" $(ls ~/.var/app/ -1 | grep -Pv "librewolf"))
+excludes=()
+echo $excludes | xargs rsync -av . /mnt/SteamDrive/Backups/2026-07-28-Backup/ \
+  --exclude=".cache/" \
+  --exclude="$HOME/.var/app/com.valvesoftware.Steam/" \
+  --exclude="__pycache__" \
+  --exclude=".cargo" \
+  --exclude="tor-browser" \
+  --exclude="$HOME/Videos/" \

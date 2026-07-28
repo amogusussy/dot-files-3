@@ -1,0 +1,35 @@
+[cursor.style]
+# shape = "Block"
+shape = "Block"
+
+[cursor.vi_mode_style]
+shape = "Block"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[scrolling]
+history = 100000
+
+[window.padding]
+x = 15
+y = 10
+
+[window]
+dynamic_title = false

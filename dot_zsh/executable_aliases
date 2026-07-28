@@ -1,0 +1,53 @@
+#!/bin/zsh
+
+alias ls="lsd"
+alias q='exit'
+alias ':q'='exit'
+alias ':q!'='exit'
+alias qq='exit'
+alias python='python3'
+alias grep='grep -I --color=auto --exclude-dir={.git,env,__pycache__}'
+alias fdd=fd
+alias wc-l='wc -l'
+alias yt-dlp="yt-dlp --config-locations $HOME/.config/yt-dlp/yt-dlp.conf"
+
+# Vim aliases
+alias vim='nvim'
+alias vi='nvim'
+alias nvi='nvim'
+alias vm='nvim'
+alias avim="NVIM_APPNAME=astrovim nvim"
+
+# Kill Commands
+alias ks='pkill -f "^[CZ]:|steam|steamwebhelper|valve|bwrap steam"'
+alias kq='pkill qbittorrent'
+alias ke='pkill electron'
+alias kf='pkill firefox'
+alias kl='pkill librewolf'
+alias kx='pkill Xorg'
+alias kd='pkill discord && pkill socat'
+
+# Doas
+alias dias='doas'
+alias dooas='doas'
+alias doaas='doas'
+alias doass='doas'
+
+# Other
+alias record='ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0 -c:v libx264 -preset veryfast $(date "+%s").mkv'
+alias l='ls'
+alias s='ls'
+alias lls='ls'
+alias lsl='ls'
+alias cls='ls'
+alias sl='ls'
+alias sls='ls'
+alias la='ls'
+alias ll='ls'
+alias ccd='cd'
+alias d='cd'
+
+# Clear
+alias lear="clear"
+alias cclear="clear"
+alias lclear="clear"

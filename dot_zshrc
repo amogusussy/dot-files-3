@@ -1,0 +1,24 @@
+export PATH=$PATH:~/.local/bin
+
+# Exit if not running interactively
+[[ $- != *i* ]] && return
+
+if [[ -z $DISPLAY && $(tty) == /dev/tty1 ]]; then
+  start-hyprland
+fi
+
+autoload -U select-word-style
+select-word-style bash
+
+ZSH_CONFIG_PREFIX="/home/matthew/.zsh"
+export PATH=$PATH:"$ZSH_CONFIG_PREFIX/functions"
+source "$ZSH_CONFIG_PREFIX/prompt"
+source "$ZSH_CONFIG_PREFIX/aliases"
+source "$ZSH_CONFIG_PREFIX/completions"
+source "$ZSH_CONFIG_PREFIX/history"
+source "$ZSH_CONFIG_PREFIX/bindings"
+
+print -n "\e]0;haxxor terminal\a"
+
+export EDITOR='nvim'
+# export XDG_RUNTIME_DIR=/run/user/$(id -u)

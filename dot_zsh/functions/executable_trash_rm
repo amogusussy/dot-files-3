@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+local args=()
+for arg in "$@"; do
+  [[ $arg == -* ]] && continue
+  args+=("$arg")
+done
+
+[[ ${#args[@]} -eq 0 ]] && {
+  echo "Error: No files or directories specified"
+  return 1
+}
+
+for arg in "${args[@]}"; do
+  gio trash "$arg"
+done

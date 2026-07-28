@@ -1,0 +1,6 @@
+require("plugins")
+require("lsp")
+require("general")
+require("mapping")
+require("statusline")
+require("float_term")

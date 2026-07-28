@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+local count="$1"
+local path=""
+for i in $(seq "$count"); do
+  path+="../"
+done
+cd "$path"

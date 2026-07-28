@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+local distro=$(lsb_release -si)
+if [[ $distro == "void" ]]; then
+  doas xbps-install -Syu
+elif [[ $distro == "arch" ]]; then
+  doas pacman -Syu
+elif [[ $distro == "EndeavourOS" ]]; then
+  doas pacman -Syu
+fi
+
+flatpak update -y
+flatpak update --user -y

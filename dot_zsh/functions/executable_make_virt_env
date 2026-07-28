@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+virtualenv -p python3 env
+source ./env/bin/activate
+pip3 install --upgrade pip
+[[ -f "requirements.txt" ]] && pip install -r requirements.txt

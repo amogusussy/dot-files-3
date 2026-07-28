@@ -5,11 +5,13 @@ from fabric.widgets.label import Label
 import subprocess
 import re
 from .icons import SPEAKER_ICONS
+from services.volume_manager import VolumeManager
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gdk
 
 SECOND = 1000
+VOLUME_MANAGER = VolumeManager(number_of_widgets=2)
 
 class VolumeWidgetContent(Box):
     def __init__(
@@ -62,15 +64,8 @@ class VolumeWidgetContent(Box):
         self.fabricator(None).do_invoke_function()
 
     def get_volume(self):
-        output = subprocess.check_output(
-            ["pactl", "get-sink-volume", f"@{self.sink_name}@"]
-        ).decode()
-        match = re.search(r"(\d+)%", output)
-        vol = 0
-        if match:
-            vol = int(match.group(1))
-
-        return vol
+        return VOLUME_MANAGER.get_volume(
+        )
 
 class VolumeWidget(EventBox):
     def __init__(

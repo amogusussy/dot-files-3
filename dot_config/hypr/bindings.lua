@@ -1,10 +1,10 @@
-local globs = require("globals")
+local G = require("globals")
 
 -- Set programs that you use
-local terminal = globs["terminal"]
-local terminal_start = globs["terminal"] .. " -e %s"
-local fileManager = globs["fileManager"]
-local menu = globs["menu"]
+local terminal = G.terminal
+local terminal_start = G.terminal .. " -e %s"
+local fileManager = G.fileManager
+local menu = G.menu
 local mod = "SUPER"
 
 for i = 1, 10 do

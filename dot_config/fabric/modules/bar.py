@@ -41,7 +41,11 @@ class StatusBar(Window):
                 name="mid-bar",
                 children=LangDateTime(
                     name="clock",
-                    formatters=("󱑆 HH:mm |  y d MMMM",),
+                    # formatters=("󱑆 HH:mm |  y d MMMM",),
+                    formatters=(
+                        "HH:mm",
+                        "d, MMMM y | HH:mm"
+                    ),
                     #locale="es"
                 )
             ),

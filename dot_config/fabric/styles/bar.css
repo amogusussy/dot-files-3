@@ -1,6 +1,7 @@
 #bar {
   padding-left: 2px;
   background-color: transparent;
+  font-size: 14px;
 }
 
 #workspaces
@@ -24,14 +25,21 @@
   text-shadow: var(--second-bg) 4px 4px 4px;
 }
 
+
+/* urgent, active, empty */
+
 #workspaces>button>label,
 #clock>label
 {
   background-color: var(--main-bg);
 }
 
-#workspaces>button.active {
-  color: var(--green);
+#workspaces>button.active>label {
+  transition: .4s;
+  color: var(--main-bg);
+  padding: 0px 20px;
+  background: var(--green);
+  border-radius: 4px;
 }
 
 #workspaces>button.empty {
@@ -43,12 +51,12 @@
   color: var(--main-fg);
 }
 
-#clock>label,
-#clock>button {
+#clock>label{
   background-color: var(--main-bg);
   margin: 0px;
   border-radius: 10px;
-  padding: 4px;
+  padding: 0px 20px;
+  text-shadow: none;
   border: 1px solid var(--blue);
 }
 

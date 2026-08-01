@@ -28,6 +28,7 @@ hl.config({
         rounding_power = 2,
         active_opacity   = (100 - trans/5)/100,
         inactive_opacity = (100 - trans)/100,
+        --screen_shader = "~/.config/hypr/shaders/rounded-screen.frag",
         --active_opacity   = 0.95,
         --inactive_opacity = 0.95,
         shadow = {
@@ -49,6 +50,19 @@ hl.config({
         enabled = true,
     },
 })
+
+hl.config({
+    decoration = {
+        --screen_shader = "~/.config/hypr/shaders/rounded-screen.frag",
+    },
+})
+
+hl.window_rule({
+    name      = "rofi-shadow",
+    match     = { class = "rofi" },
+    opacity = "0.2",
+})
+
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })

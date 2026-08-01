@@ -8,12 +8,12 @@
 {
   background-color: var(--main-bg);
   border-radius: 10px;
-  padding: 4px;
+  padding: 4px 4px;
   border: 1px solid var(--blue);
 }
 
 #clock {
-  padding: 20px;
+  padding: 0px 0px;
   border-radius: 10px;
 }
 
@@ -35,10 +35,14 @@
 }
 
 #workspaces>button.active>label {
-  transition: .4s;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+
   color: var(--main-bg);
   padding: 0px 20px;
-  background: var(--green);
+  background: var(--blue);
   border-radius: 4px;
 }
 
@@ -55,7 +59,7 @@
   background-color: var(--main-bg);
   margin: 0px;
   border-radius: 10px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   text-shadow: none;
   border: 1px solid var(--blue);
 }
@@ -94,6 +98,7 @@
   border: 1px solid var(--blue);
   padding-right: 8px;
   padding-left:  8px;
+  /*box-shadow: 0px 0px 20px black;*/
 }
 #volume_widget>svg {
   margin-right: 14px;

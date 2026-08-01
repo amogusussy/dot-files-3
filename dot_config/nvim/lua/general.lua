@@ -8,7 +8,7 @@ vim.cmd("colorscheme tokyonight-night")
 
 
 vim.opt.tabstop = 2 -- tabwidth
-vim.opt.shiftwidth = 2 -- indent width
+vim.opt.shiftwidth = 1 -- indent width
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.autoindent = true -- copy indent from current line
